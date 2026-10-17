@@ -4,12 +4,12 @@ const element = React.createElement(
     {className: 'greeting'},
     [
        React.createElement(
-    'h1',
+    'div',
     {className: 'greeting__title'},
     'Hello, world!',
        ),
        React.createElement(
-    'p',
+    'div',
     {className: 'greeting__title'},
     "I'm learning React",
        ),
