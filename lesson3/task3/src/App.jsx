@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 const userInfo = {
     name: 'Tom',
-    userAvatar: 'https://avatars1.githubusercontent.com',
+    userAvatar: 'https://avatars1.githubusercontent.com/u10001',
 }
  const App = () => {
     return (
