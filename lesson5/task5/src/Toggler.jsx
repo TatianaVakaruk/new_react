@@ -5,7 +5,7 @@ class Toggler extends Component{
     super(props);
     this.state = {
       toggle: true,
-      value: 'On',
+      value: 'Off',
     }
   }
    
@@ -13,12 +13,12 @@ class Toggler extends Component{
     if(this.state.toggle){
       this.setState({
        toggle: false,
-       value: 'Off'
+       value: 'On'
       })
     } else{
       this.setState({
         toggle: true,
-        value: 'On'
+        value: 'Off'
       })
     }
   }
