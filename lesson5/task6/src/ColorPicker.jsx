@@ -1,43 +1,43 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
-class ColorPicker extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      toggle: '',
+class ColorPicker extends Component {
+    constructor(props){
+     super(props);
+     this.state={
+      toggle:'',
+      };
     }
-  }
-  aqua() {
+    setAqua(){
     this.setState({
-      toggle: 'Aqua'
-    })
-  }
-  coral() {
+      toggle:'Aqua',
+        })
+    }
+    setBisque(){
+      this.setState({
+        toggle:'Bisque'
+        })
+    }
+    setCoral(){
     this.setState({
-      toggle: 'Coral'
-    })
-  }
-  bisque() {
-    this.setState({
-      toggle: 'Bisque',
-    })
-  }
-  clear = () => {
-    this.setState({
-      toggle: '',
-    })
-  }
- render() {
-    return (
-     <div>
-  <div class="picker__title">{this.state.toggle}</div>
+      toggle:'Coral'
+        })
+    }
+    Clear(){
+        this.setState({
+         toggle:''
+        })
+    }
+    render(){
+        return (
+            <div>
+  <div className="picker__title">{this.state.toggle}</div>
   <div>
-    <button class="picker__button picker__button_coral" onMouseEnter={() => this.coral()} onMouseLeave={() => this.clear()}></button>
-    <button class="picker__button picker__button_aqua" onMouseEnter={() => this.aqua()} onMouseLeave={() => this.clear()}></button>
-    <button class="picker__button picker__button_bisque" onMouseEnter={() => this.bisque()} onMouseLeave={() => this.clear()}></button>
+    <button onMouseEnter={()=>this.setCoral()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_coral"></button>
+    <button onMouseEnter={()=>this.setAqua()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_aqua"></button>
+    <button onMouseEnter={()=>this.setBisque()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_bisque"></button>
   </div>
 </div>
-    );
-  }
+        )
+    }
 }
 export default ColorPicker;
