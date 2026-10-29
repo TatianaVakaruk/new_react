@@ -14,9 +14,9 @@ class ColorPicker extends Component{
      <div>
   <div class="picker__title">{this.state.toggle}</div>
   <div>
-    <button class="picker__button picker__button_coral" onMouseEnter={() => this.colorChange('Coral')} onMouseLeave={() => this.colorLeave()}></button>
-    <button class="picker__button picker__button_aqua" onMouseEnter={() => this.colorChange('Aqua')} onMouseLeave={() => this.colorLeave()}></button>
-    <button class="picker__button picker__button_bisque" onMouseEnter={() => this.colorChange('Bisque')}onMouseLeave={() => this.colorLeave()}></button>
+    <button onMouseEnter={() => this.colorChange('Coral')} onMouseLeave={() => this.colorLeave()} class="picker__button picker__button_coral"></button>
+    <button onMouseEnter={() => this.colorChange('Aqua')} onMouseLeave={() => this.colorLeave()} class="picker__button picker__button_aqua"></button>
+    <button onMouseEnter={() => this.colorChange('Bisque')}onMouseLeave={() => this.colorLeave()} class="picker__button picker__button_bisque"></button>
   </div>
 </div>
     );
