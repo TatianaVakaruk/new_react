@@ -9,22 +9,22 @@ class ColorPicker extends Component {
     }
     setAqua(){
     this.setState({
-      toggle:'Aqua',
+      toggle: 'Aqua',
         })
     }
     setBisque(){
       this.setState({
-        toggle:'Bisque'
+        toggle: 'Bisque'
         })
     }
     setCoral(){
     this.setState({
-      toggle:'Coral'
+      toggle: 'Coral'
         })
     }
     Clear(){
         this.setState({
-         toggle:''
+         toggle: ''
         })
     }
     render(){
