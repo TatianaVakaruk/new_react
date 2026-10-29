@@ -7,17 +7,17 @@ class ColorPicker extends Component{
       toggle: '',
     }
   }
-  aqua  = () => {
+  aqua() {
     this.setState({
       toggle: 'Aqua'
     })
   }
-  coral = () => {
+  coral() {
     this.setState({
       toggle: 'Coral'
     })
   }
-  bisque = () => {
+  bisque() {
     this.setState({
       toggle: 'Bisque',
     })
