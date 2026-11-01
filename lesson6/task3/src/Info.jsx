@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Message = ({text}) => {
+const Info = ({text}) => {
     if(!text){
         return null;
     }
@@ -8,4 +8,4 @@ const Message = ({text}) => {
        <div className="message">{text}</div> 
     )
 }
-export default Message;
+export default Info;
