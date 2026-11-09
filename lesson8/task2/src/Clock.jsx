@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-function getTimeWithOffset(offset) {
-    const now = new Date();
-  const targetTime = now.getTime() + (offset - 2) * 3600 * 1000;
-  return new Date(targetTime);
+const getTimeWithOffset = offset => {
+  const currentTime = new Date();
+  const utcOffset = currentTime.getTimezoneOffset() / 60;
+  return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
 }
 class Clock extends Component {
   constructor(props){
