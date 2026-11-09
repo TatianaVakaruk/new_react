@@ -18,8 +18,8 @@ class App extends Component {
       <>
       <button onClick={this.toggle}>Toggle</button>
     <div>{this.state.visible &&<Clock location='NEW YORK' offset={-5} />}</div>
-    <div>{this.state.visible &&<Clock location='NEW YORK' offset={2} />}</div>
-    <div>{this.state.visible &&<Clock location='NEW YORK' offset={0} />}</div>
+    <div>{this.state.visible &&<Clock location='KYIV' offset={2} />}</div>
+    <div>{this.state.visible &&<Clock location='LONDON' offset={0} />}</div>
     </>
    )
 }
