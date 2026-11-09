@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 const Transaction = ({from, to, amount, rate, time}) => {
-    const timeTransform = () => {
+ const timeTransform = () => {
 const now = new Date(time);
 const hours = now.getHours();
 const minutes = now.getMinutes();
