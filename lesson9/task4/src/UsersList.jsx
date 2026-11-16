@@ -36,12 +36,13 @@ class UsersList extends Component {
      }
    render(){
     const filterList = users.filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
+    let userList = this.state.value ? filterList : users;
     let count = filterList.length;
     return (
       <div>
-        <Filter count={count} onChange={this.setInputValue} filterText={this.state.value}/>
+        <Filter count={count} onChange={this.onChange} filterText={this.state.value}/>
          <ul class="users">
-          {filterList.map((user) => <User key={user.id} {...user} />)}
+          {userList.map((user) => <User key={user.id} {...user} />)}
          </ul>
       </div>
     )
