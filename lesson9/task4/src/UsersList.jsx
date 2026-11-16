@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import User from './User';
 import Filter from './Filter';
 
-const usersList = [
+const users = [
   {
     name: 'Tom',
     age: 18,
@@ -35,11 +35,11 @@ class UsersList extends Component {
      })
      }
    render(){
-    const filterList = usersList.filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
+    const filterList = users.filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
     let count = filterList.length;
     return (
       <div>
-        <Filter count={count} onChange={this.setInputValue} value={this.state.value}/>
+        <Filter count={count} onChange={this.setInputValue} filterText={this.state.value}/>
          <ul class="users">
           {filterList.map((user) => <User key={user.id} {...user} />)}
          </ul>
