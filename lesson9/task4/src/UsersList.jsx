@@ -41,7 +41,7 @@ class UsersList extends Component {
     return (
       <div>
         <Filter count={count} onChange={this.onChange} filterText={this.state.value}/>
-         <ul class="users">
+         <ul className="users">
           {userList.map((user) => <User key={user.id} {...user} />)}
          </ul>
       </div>
