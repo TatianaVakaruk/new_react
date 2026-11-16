@@ -12,7 +12,7 @@ class UsersList extends Component {
      }
    render(){
     const {users} = this.props;
-    const filterList = users.filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
+    const filterList = users.slice().filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
     let userList = this.state.value ? filterList : users;
     let count = userList.length;
     return (
