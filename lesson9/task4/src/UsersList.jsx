@@ -28,7 +28,7 @@ class UsersList extends Component {
   state = {
         value: '',
     }
-  setInputValue = (e) => {
+ onChange = (e) => {
      e.preventDefault();
      this.setState({
         value: e.target.value
