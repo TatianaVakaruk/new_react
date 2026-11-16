@@ -12,14 +12,15 @@ class UsersList extends Component {
      }
    render(){
     const {users} = this.props;
-    const filterList = users.slice().filter(user=> user.name.toLowerCase().includes(this.state.value.toLowerCase()));
-    let userList = this.state.value ? filterList : users;
-    let count = userList.length;
+    filterText = this.state.value;
+    const filteredUsers = users.filter((user) =>
+      user.name.toLowerCase().includes(filterText.toLowerCase())
+    );
     return (
       <div>
-        <Filter count={count} onChange={this.onChange} filterText={this.state.value}/>
+        <Filter count={count} onChange={this.onChange} filterText={filterText}/>
          <ul className="users">
-          {userList.map((user) => <User key={user.id} {...user} />)}
+          {filteredUsers.map((user) => <User key={user.id} {...user} />)}
          </ul>
       </div>
     )
