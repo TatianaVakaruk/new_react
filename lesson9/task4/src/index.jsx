@@ -23,9 +23,12 @@ const users = [
     name: 'Sam',
     age: 13,
     id: 4,
-  }
-];
-
+  },
+  {
+    name: 'Tanya',
+    age: 41,
+  } 
+]
 const rootElement = document.querySelector('#root');
 
 ReactDOM.render(<UsersList users={users} />, rootElement);
